@@ -4,6 +4,7 @@ import pandas as pd
 import segyio
 import json
 import sys
+import os
 
 filename = sys.argv[1]
 
@@ -88,5 +89,9 @@ class NpEncoder(json.JSONEncoder):
 
 json_result = json.dumps(json_obj, indent = 4, cls = NpEncoder)
 
-with open('test.json', 'w') as outfile:
+output_filename = os.path.splitext(filename)[0] + '.json'
+
+print(output_filename)
+
+with open(output_filename, 'w') as outfile:
     outfile.write(json_result)
