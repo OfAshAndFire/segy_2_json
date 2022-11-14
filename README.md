@@ -3,7 +3,7 @@ A simple segyio wrapper that converts segy files into json files
 
 # Requirements
 - python
-- pandas (for plotting library)
+- pandas (for plotting datasets as tables)
 - segyio
 
 # Usage
